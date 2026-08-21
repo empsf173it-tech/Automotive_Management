@@ -694,6 +694,27 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--glass-border);
 }
 
+/* Custom Dark Theme Alert Banners */
+.alert {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--glass-border);
+  padding: 1rem 1.25rem;
+  font-weight: 500;
+  box-shadow: var(--box-shadow);
+}
+
+.alert-danger {
+  background-color: rgba(230, 57, 70, 0.15) !important;
+  color: #ff6b7a !important;
+  border-color: rgba(230, 57, 70, 0.4) !important;
+}
+
+.alert-success {
+  background-color: rgba(16, 185, 129, 0.15) !important;
+  color: #34d399 !important;
+  border-color: rgba(16, 185, 129, 0.4) !important;
+}
+
 /* Auth Pages (Login / Signup) */
 .auth-card {
   max-width: 450px;
