@@ -542,6 +542,17 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+/* Testimonial Cards Baseline Alignment */
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.testimonial-quote {
+  flex-grow: 1;
+}
+
 .stat-number {
   font-size: 2.25rem;
   font-weight: 800;
