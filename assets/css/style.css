@@ -715,15 +715,33 @@ h1, h2, h3, h4, h5, h6 {
   border-color: rgba(16, 185, 129, 0.4) !important;
 }
 
-/* Auth Pages (Login / Signup) */
+/* Auth Pages (Login / Signup) - Standalone Layout */
+.auth-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  background: radial-gradient(circle at center top, rgba(230, 57, 70, 0.12) 0%, var(--primary-dark) 75%);
+}
+
 .auth-card {
-  max-width: 450px;
-  margin: 4rem auto;
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
   padding: 2.5rem;
   background-color: var(--primary-card);
   border: 1px solid var(--glass-border);
   border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.hover-accent {
+  transition: var(--transition-fast);
+}
+
+.hover-accent:hover {
+  color: var(--secondary-color) !important;
 }
 
 .social-login-btn {
