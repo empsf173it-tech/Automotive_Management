@@ -176,4 +176,199 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // 8. Password Visibility Toggles
+  const setupPasswordToggle = (toggleBtnId, passwordInputId) => {
+    const toggleBtn = document.getElementById(toggleBtnId);
+    const passwordInput = document.getElementById(passwordInputId);
+    if (toggleBtn && passwordInput) {
+      toggleBtn.addEventListener('click', () => {
+        const isPassword = passwordInput.type === 'password';
+        passwordInput.type = isPassword ? 'text' : 'password';
+        const icon = toggleBtn.querySelector('i');
+        if (icon) {
+          icon.className = isPassword ? 'bi bi-eye-slash' : 'bi bi-eye';
+        }
+      });
+    }
+  };
+
+  setupPasswordToggle('toggleSignupPassword', 'signupPassword');
+  setupPasswordToggle('toggleConfirmPassword', 'confirmPassword');
+  setupPasswordToggle('toggleLoginPassword', 'loginPassword');
+
+  // Helper: Display Alert Message
+  const showAlert = (alertEl, message, type = 'danger') => {
+    if (!alertEl) return;
+    alertEl.className = `alert alert-${type} mb-4 d-flex align-items-center justify-content-between`;
+    alertEl.innerHTML = `<div>${message}</div><button type="button" class="btn-close btn-close-white ms-2" onclick="this.parentElement.classList.add('d-none')"></button>`;
+    alertEl.classList.remove('d-none');
+  };
+
+  // 9. Interactive Signup Form Processing
+  const signupForm = document.getElementById('signupForm');
+  const signupAlert = document.getElementById('signupAlert');
+  if (signupForm) {
+    signupForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const firstName = document.getElementById('firstName')?.value.trim();
+      const lastName = document.getElementById('lastName')?.value.trim();
+      const email = document.getElementById('signupEmail')?.value.trim();
+      const vehicle = document.getElementById('vehicleMake')?.value.trim();
+      const password = document.getElementById('signupPassword')?.value;
+      const confirmPassword = document.getElementById('confirmPassword')?.value;
+      const termsCheck = document.getElementById('termsCheck')?.checked;
+      const submitBtn = document.getElementById('signupSubmitBtn');
+
+      // Validation Checks
+      if (!firstName || !lastName) {
+        showAlert(signupAlert, '<i class="bi bi-exclamation-triangle-fill me-2"></i> Please provide both your First and Last Name.');
+        return;
+      }
+      if (!email || !email.includes('@')) {
+        showAlert(signupAlert, '<i class="bi bi-exclamation-triangle-fill me-2"></i> Please enter a valid email address.');
+        return;
+      }
+      if (!vehicle) {
+        showAlert(signupAlert, '<i class="bi bi-exclamation-triangle-fill me-2"></i> Please enter your primary vehicle make/model.');
+        return;
+      }
+      if (!password || password.length < 8) {
+        showAlert(signupAlert, '<i class="bi bi-exclamation-triangle-fill me-2"></i> Password must be at least 8 characters long.');
+        return;
+      }
+      if (password !== confirmPassword) {
+        showAlert(signupAlert, '<i class="bi bi-exclamation-triangle-fill me-2"></i> Passwords do not match. Please verify both fields.');
+        return;
+      }
+      if (!termsCheck) {
+        showAlert(signupAlert, '<i class="bi bi-exclamation-triangle-fill me-2"></i> You must agree to the Terms of Service to register.');
+        return;
+      }
+
+      // Success Registration Handling
+      const fullName = `${firstName} ${lastName}`;
+      const userData = {
+        name: fullName,
+        email: email,
+        vehicle: vehicle,
+        role: 'Client VIP Member'
+      };
+
+      localStorage.setItem('veloceUser', JSON.stringify(userData));
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span> Creating Account...';
+      }
+
+      showAlert(signupAlert, `<i class="bi bi-check-circle-fill me-2"></i> Registration successful! Welcome, ${firstName}! Redirecting to Client Portal...`, 'success');
+
+      setTimeout(() => {
+        window.location.href = 'dashboard.html';
+      }, 1200);
+    });
+  }
+
+  // 10. Interactive Login Form Processing
+  const loginForm = document.getElementById('loginForm');
+  const loginAlert = document.getElementById('loginAlert');
+  if (loginForm) {
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const email = document.getElementById('loginEmail')?.value.trim();
+      const password = document.getElementById('loginPassword')?.value;
+      const submitBtn = document.getElementById('loginSubmitBtn');
+
+      if (!email || !email.includes('@')) {
+        showAlert(loginAlert, '<i class="bi bi-exclamation-triangle-fill me-2"></i> Please enter a valid account email.');
+        return;
+      }
+      if (!password) {
+        showAlert(loginAlert, '<i class="bi bi-exclamation-triangle-fill me-2"></i> Please enter your password.');
+        return;
+      }
+
+      // Existing user or default login
+      let userObj = {
+        name: 'Enzo Veloce',
+        email: email,
+        role: 'Master Administrator'
+      };
+
+      const existingData = localStorage.getItem('veloceUser');
+      if (existingData) {
+        try {
+          const parsed = JSON.parse(existingData);
+          if (parsed.email === email) {
+            userObj = parsed;
+          }
+        } catch (err) {
+          // fallback default
+        }
+      }
+
+      localStorage.setItem('veloceUser', JSON.stringify(userObj));
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span> Authenticating...';
+      }
+
+      showAlert(loginAlert, '<i class="bi bi-check-circle-fill me-2"></i> Authentication successful! Launching Portal...', 'success');
+
+      setTimeout(() => {
+        window.location.href = 'dashboard.html';
+      }, 1000);
+    });
+  }
+
+  // 11. Social Login Simulation Buttons
+  const socialBtns = document.querySelectorAll('.social-login-btn');
+  socialBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const provider = btn.textContent.trim();
+      const targetAlert = signupAlert || loginAlert;
+      if (targetAlert) {
+        showAlert(targetAlert, `<i class="bi bi-shield-check me-2"></i> ${provider} OAuth authentication connected! Redirecting...`, 'success');
+        const defaultUser = {
+          name: provider + ' User',
+          email: 'user@' + provider.toLowerCase().replace(/\s+/g, '') + '.com',
+          role: 'Verified Client'
+        };
+        localStorage.setItem('veloceUser', JSON.stringify(defaultUser));
+        setTimeout(() => {
+          window.location.href = 'dashboard.html';
+        }, 1200);
+      }
+    });
+  });
+
+  // 12. Dashboard LocalStorage User Sync
+  const dashUserName = document.getElementById('dashUserName');
+  const dashUserRole = document.getElementById('dashUserRole');
+  if (dashUserName) {
+    const savedUser = localStorage.getItem('veloceUser');
+    if (savedUser) {
+      try {
+        const parsed = JSON.parse(savedUser);
+        if (parsed.name) dashUserName.textContent = parsed.name;
+        if (parsed.role && dashUserRole) dashUserRole.textContent = parsed.role;
+      } catch (err) {
+        // ignore
+      }
+    }
+  }
+
+  // Logout / Exit Portal handler
+  const exitPortalBtn = document.getElementById('exitPortalBtn');
+  if (exitPortalBtn) {
+    exitPortalBtn.addEventListener('click', () => {
+      localStorage.removeItem('veloceUser');
+    });
+  }
 });
+

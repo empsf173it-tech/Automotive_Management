@@ -99,31 +99,46 @@
           <span class="position-absolute top-50 start-50 translate-middle px-3 bg-card-custom opacity-75 fs-6">or register email</span>
         </div>
 
-        <form action="dashboard.html">
+        <!-- Alert Container -->
+        <div id="signupAlert" class="alert d-none mb-4" role="alert"></div>
+
+        <form id="signupForm" novalidate>
           <div class="row g-2 mb-3">
             <div class="col-6">
-              <label class="form-label opacity-75">First Name</label>
-              <input type="text" class="form-control form-control-custom" placeholder="Sebastian" required>
+              <label class="form-label opacity-75" for="firstName">First Name</label>
+              <input type="text" id="firstName" class="form-control form-control-custom" placeholder="Sebastian" required>
             </div>
             <div class="col-6">
-              <label class="form-label opacity-75">Last Name</label>
-              <input type="text" class="form-control form-control-custom" placeholder="Vettel" required>
+              <label class="form-label opacity-75" for="lastName">Last Name</label>
+              <input type="text" id="lastName" class="form-control form-control-custom" placeholder="Vettel" required>
             </div>
           </div>
 
           <div class="mb-3">
-            <label class="form-label opacity-75">Email Address</label>
-            <input type="email" class="form-control form-control-custom" placeholder="s.vettel@f1.com" required>
+            <label class="form-label opacity-75" for="signupEmail">Email Address</label>
+            <input type="email" id="signupEmail" class="form-control form-control-custom" placeholder="s.vettel@f1.com" required>
           </div>
 
           <div class="mb-3">
-            <label class="form-label opacity-75">Vehicle Primary Make</label>
-            <input type="text" class="form-control form-control-custom" placeholder="e.g. Ferrari / Porsche / Aston Martin" required>
+            <label class="form-label opacity-75" for="vehicleMake">Primary Vehicle Make & Model</label>
+            <input type="text" id="vehicleMake" class="form-control form-control-custom" placeholder="e.g. Ferrari 488 / Porsche 911" required>
           </div>
 
-          <div class="mb-3">
-            <label class="form-label opacity-75">Password</label>
-            <input type="password" class="form-control form-control-custom" placeholder="At least 8 characters" required>
+          <div class="row g-2 mb-3">
+            <div class="col-md-6">
+              <label class="form-label opacity-75" for="signupPassword">Password</label>
+              <div class="input-group">
+                <input type="password" id="signupPassword" class="form-control form-control-custom" placeholder="Min. 8 characters" minlength="8" required>
+                <button class="btn btn-password-toggle" type="button" id="toggleSignupPassword" aria-label="Toggle password visibility"><i class="bi bi-eye"></i></button>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label opacity-75" for="confirmPassword">Confirm Password</label>
+              <div class="input-group">
+                <input type="password" id="confirmPassword" class="form-control form-control-custom" placeholder="Re-enter password" required>
+                <button class="btn btn-password-toggle" type="button" id="toggleConfirmPassword" aria-label="Toggle confirm password visibility"><i class="bi bi-eye"></i></button>
+              </div>
+            </div>
           </div>
 
           <div class="form-check mb-4">
@@ -133,7 +148,7 @@
             </label>
           </div>
 
-          <button type="submit" class="btn-accent w-100 py-3 mb-3"><i class="bi bi-person-check-fill me-1"></i> Register Account</button>
+          <button type="submit" id="signupSubmitBtn" class="btn-accent w-100 py-3 mb-3"><i class="bi bi-person-check-fill me-1"></i> Register Account</button>
 
           <p class="text-center opacity-75 fs-6 mb-0">
             Already have an account? <a href="login.html" class="text-accent fw-semibold text-decoration-none">Sign In</a>

@@ -676,6 +676,24 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(248, 249, 250, 0.4);
 }
 
+/* Password Toggle Button */
+.btn-password-toggle {
+  background-color: var(--primary-dark);
+  border: 1px solid var(--glass-border);
+  border-left: none;
+  color: var(--tertiary-color);
+  padding: 0.75rem 1rem;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: var(--transition-fast);
+}
+
+.btn-password-toggle:hover, .btn-password-toggle:focus {
+  background-color: var(--primary-card);
+  color: var(--secondary-color);
+  border-color: var(--glass-border);
+}
+
 /* Auth Pages (Login / Signup) */
 .auth-card {
   max-width: 450px;
