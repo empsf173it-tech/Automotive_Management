@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automotive Services | Veloce Motors - Master Engineering</title>
+  <meta name="description" content="Explore Veloce Motors' 8 master automotive services: ECU engine tuning, ceramic coating, brake upgrade, EV battery diagnostics, gearbox overhaul, track prep & custom upholstery.">
+  <meta name="keywords" content="Automotive Services, Car Tuning, ECU Remap, Ceramic Coating, Car Brake Calibration, Transmission Overhaul, EV Battery Service">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Favicon Brand Logo -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  
+  <!-- Custom Style -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-speedometer2"></i> VELOCE<span class="text-accent">MOTORS</span>
+      </a>
+      
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2 text-white"></i>
+      </button>
+
+      <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        </ul>
+        <div class="d-flex gap-2">
+          <a href="signup.html" class="nav-auth-btn nav-signup"><i class="bi bi-person-plus"></i> Signup</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header border-bottom border-secondary">
+      <h5 class="offcanvas-title text-white" id="mobileMenuLabel">
+        <i class="bi bi-speedometer2 text-accent"></i> VELOCE MOTORS
+      </h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between">
+      <ul class="navbar-nav">
+        <li class="nav-item mb-2"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item mb-2"><a class="nav-link active" href="services.html">Services</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="privacy.html">Privacy Policy</a></li>
+        <li class="nav-item mb-2"><a class="nav-link text-accent" href="dashboard.html"><i class="bi bi-speedometer me-1"></i> Dashboard</a></li>
+      </ul>
+      <div class="d-grid gap-2 pt-4 border-top border-secondary">
+        <a href="signup.html" class="nav-auth-btn nav-signup text-center"><i class="bi bi-person-plus"></i> Signup</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <section class="page-hero-bg" style="background-image: url('assets/img/service_tuning.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content-relative text-center">
+      <span class="text-accent fw-bold text-uppercase tracking-wider">Precision Solutions</span>
+      <h1 class="display-5 fw-bold mt-2 text-center">Master Automotive Services</h1>
+      <p class="opacity-85 lead max-w-700 mx-auto text-center">Explore our 8 specialized engineering solutions for luxury, sports, exotic, and race vehicles.</p>
+    </div>
+  </section>
+
+  <!-- 8 EVEN SERVICES GRID (Rule 7) -->
+  <section class="py-6">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Card 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-4">
+            <div>
+              <img src="assets/img/service_tuning_1787212526259.jpg" alt="Engine Tuning" class="service-img">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-danger">Powertrain</span>
+                <span class="text-accent fw-bold">Stage 1 - 3</span>
+              </div>
+              <h3 class="h5 fw-bold mb-2">ECU Diagnostics & Tuning</h3>
+              <p class="opacity-75 fs-6 mb-3">Custom dyno-proven software remapping for optimized ignition timing, boost pressure, and throttle feedback.</p>
+              <ul class="list-unstyled opacity-75 fs-6 mb-4">
+                <li class="mb-1"><i class="bi bi-check2 text-accent me-2"></i> +15% to +35% Horsepower Gain</li>
+                <li class="mb-1"><i class="bi bi-check2 text-accent me-2"></i> Real-time Telemetry Logging</li>
+                <li><i class="bi bi-check2 text-accent me-2"></i> Pops & Bangs Map Toggle</li>
+              </ul>
+            </div>
+            <button class="btn-accent w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#serviceBookingModal" data-service="ECU Diagnostics & Tuning"><i class="bi bi-calendar-event"></i> Book Service</button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-4">
+            <div>
+              <img src="assets/img/service_detailing_1787212550257.jpg" alt="Ceramic Coating" class="service-img">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-danger">Cosmetic</span>
+                <span class="text-accent fw-bold">9H Nano Grade</span>
+              </div>
+              <h3 class="h5 fw-bold mb-2">Ceramic Coating & PPF</h3>
+              <p class="opacity-75 fs-6 mb-3">Hydrophobic paint protection film wrapping guarding against rock chips, UV oxidation, and scratches.</p>
+              <ul class="list-unstyled opacity-75 fs-6 mb-4">
+                <li class="mb-1"><i class="bi bi-check2 text-accent me-2"></i> Self-Healing Clear Film</li>
+                <li class="mb-1"><i class="bi bi-check2 text-accent me-2"></i> High-Gloss Mirror Finish</li>
+                <li><i class="bi bi-check2 text-accent me-2"></i> 7-Year Warranty Coverage</li>
+              </ul>
+            </div>
+            <button class="btn-accent w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#serviceBookingModal" data-service="Ceramic Coating & PPF"><i class="bi bi-calendar-event"></i> Book Service</button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-4">
+            <div>
+              <img src="assets/img/service_brakes_1787223593839.jpg" alt="Brake System Upgrade" class="service-img">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-danger">Chassis</span>
+                <span class="text-accent fw-bold">Carbon-Ceramic</span>
+              </div>
+              <h3 class="h5 fw-bold mb-2">Brake & Active Suspension</h3>
+              <p class="opacity-75 fs-6 mb-3">Multi-piston monobloc caliper upgrades, carbon rotor installations, and active coilovers corner weighting.</p>
+              <ul class="list-unstyled opacity-75 fs-6 mb-4">
+                <li class="mb-1"><i class="bi bi-check2 text-accent me-2"></i> 6 & 8-Piston Forged Calipers</li>
+                <li class="mb-1"><i class="bi bi-check2 text-accent me-2"></i> Corner Weight Balancing</li>
+                <li><i class="bi bi-check2 text-accent me-2"></i> Fade-Free Track Pads</li>
+              </ul>
+            </div>
+            <button class="btn-accent w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#serviceBookingModal" data-service="Brake & Active Suspension"><i class="bi bi-calendar-event"></i> Book Service</button>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-4">
+            <div>
+              <img src="assets/img/service_exhaust_1787223614503.jpg" alt="Exhaust Tuning" class="service-img">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-danger">Performance</span>
+                <span class="text-accent fw-bold">Titanium Exhaust</span>
+              </div>
+              <h3 class="h5 fw-bold mb-2">Titanium Exhaust Systems</h3>
+              <p class="opacity-75 fs-6 mb-3">Lightweight Inconel and titanium valved exhaust systems for acoustic sound enhancement and weight reduction.</p>
+              <ul class="list-unstyled opacity-75 fs-6 mb-4">
+                <li class="mb-1"><i class="bi bi-check2 text-accent me-2"></i> Wireless Valve Control</li>
+                <li class="mb-1"><i class="bi bi-check2 text-accent me-2"></i> 40% Weight Reduction</li>
+                <li><i class="bi bi-check2 text-accent me-2"></i> High-Flow Downpipes</li>
+              </ul>
+            </div>
+            <button class="btn-accent w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#serviceBookingModal" data-service="Titanium Exhaust Systems"><i class="bi bi-calendar-event"></i> Book Service</button>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-4">
+            <div>
+              <img src="assets/img/service_ev_battery_1787223641131.jpg" alt="EV Service" class="service-img">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-danger">Electric</span>
+                <span class="text-accent fw-bold">800V High-Voltage</span>
+              </div>
+              <h3 class="h5 fw-bold mb-2">EV Powertrain & Battery Check</h3>
+              <p class="opacity-75 fs-6 mb-3">High-voltage battery cell balance diagnostics, inverter thermal management, and electric motor calibration.</p>
+              <ul class="list-unstyled opacity-75 fs-6 mb-4">
+                <li class="mb-1"><i class="bi bi-check2 text-accent me-2"></i> Battery Degradation Scan</li>
+                <li class="mb-1"><i class="bi bi-check2 text-accent me-2"></i> Thermal Fluid Flush</li>
+                <li><i class="bi bi-check2 text-accent me-2"></i> Regenerative Brake Calibration</li>
+              </ul>
+            </div>
+            <button class="btn-accent w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#serviceBookingModal" data-service="EV Powertrain & Battery Check"><i class="bi bi-calendar-event"></i> Book Service</button>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-4">
+            <div>
+              <img src="assets/img/service_interior_1787223664203.jpg" alt="Interior Crafting" class="service-img">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-danger">Bespoke</span>
+                <span class="text-accent fw-bold">Alcantara / Nappa</span>
+              </div>
+              <h3 class="h5 fw-bold mb-2">Luxury Upholstery & Cabin</h3>
+              <p class="opacity-75 fs-6 mb-3">Custom stitched leather seats, dry carbon fiber interior trim accents, and LED starlight headliner fitting.</p>
+              <ul class="list-unstyled opacity-75 fs-6 mb-4">
+                <li class="mb-1"><i class="bi bi-check2 text-accent me-2"></i> Italian Nappa Leather</li>
+                <li class="mb-1"><i class="bi bi-check2 text-accent me-2"></i> Forged Carbon Inlays</li>
+                <li><i class="bi bi-check2 text-accent me-2"></i> Ambient Fiber-Optics</li>
+              </ul>
+            </div>
+            <button class="btn-accent w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#serviceBookingModal" data-service="Luxury Upholstery & Cabin"><i class="bi bi-calendar-event"></i> Book Service</button>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-4">
+            <div>
+              <img src="assets/img/service_gearbox_1787223690537.jpg" alt="Gearbox Overhaul" class="service-img">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-danger">Mechanical</span>
+                <span class="text-accent fw-bold">Dual-Clutch</span>
+              </div>
+              <h3 class="h5 fw-bold mb-2">Gearbox & Transmission Rebuild</h3>
+              <p class="opacity-75 fs-6 mb-3">Upgraded clutch packs, LSD differential lock installations, and heavy-duty gear set assembly.</p>
+              <ul class="list-unstyled opacity-75 fs-6 mb-4">
+                <li class="mb-1"><i class="bi bi-check2 text-accent me-2"></i> Upgraded Clutch Discs</li>
+                <li class="mb-1"><i class="bi bi-check2 text-accent me-2"></i> TCU Shift-Speed Remap</li>
+                <li><i class="bi bi-check2 text-accent me-2"></i> Differential Lock Setup</li>
+              </ul>
+            </div>
+            <button class="btn-accent w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#serviceBookingModal" data-service="Gearbox & Transmission Rebuild"><i class="bi bi-calendar-event"></i> Book Service</button>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-4">
+            <div>
+              <img src="assets/img/service_track_prep_1787223714273.jpg" alt="Track Day Prep" class="service-img">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-danger">Motorsport</span>
+                <span class="text-accent fw-bold">Race Ready</span>
+              </div>
+              <h3 class="h5 fw-bold mb-2">Track-Day Prep & Telemetry</h3>
+              <p class="opacity-75 fs-6 mb-3">Comprehensive pre-race safety check, track camber alignment, high-temp fluid flush, and aero setup.</p>
+              <ul class="list-unstyled opacity-75 fs-6 mb-4">
+                <li class="mb-1"><i class="bi bi-check2 text-accent me-2"></i> 120-Point Race Inspection</li>
+                <li class="mb-1"><i class="bi bi-check2 text-accent me-2"></i> High-Temp Brake Flush</li>
+                <li><i class="bi bi-check2 text-accent me-2"></i> Telemetry Data Setup</li>
+              </ul>
+            </div>
+            <button class="btn-accent w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#serviceBookingModal" data-service="Track-Day Prep & Telemetry"><i class="bi bi-calendar-event"></i> Book Service</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Assurance CTA Banner (Ensures proper spacing before footer) -->
+  <section class="py-5 bg-primary-custom border-top border-bottom border-secondary border-opacity-10 my-5">
+    <div class="container text-center max-w-800">
+      <span class="badge bg-danger mb-3 px-3 py-2 fs-6">Precision Engineering Guarantee</span>
+      <h3 class="display-6 fw-bold text-white mb-3">Uncompromising Care For Exotic Machinery</h3>
+      <p class="opacity-75 fs-5 mb-4">Every vehicle undergoing tuning or service at Veloce Motors receives comprehensive telemetry diagnostics and a 120-point mechanical safety audit.</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="contact.html" class="btn-accent"><i class="bi bi-headset"></i> Contact Engineering Advisor</a>
+        <a href="faq.html" class="btn-outline-custom"><i class="bi bi-question-circle"></i> Service FAQs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Booking Modal -->
+  <div class="modal fade" id="serviceBookingModal" tabindex="-1" aria-labelledby="serviceBookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-primary-card text-white border border-secondary border-opacity-25">
+        <div class="modal-header border-bottom border-secondary border-opacity-25">
+          <h5 class="modal-title fw-bold" id="serviceBookingModalLabel">
+            <i class="bi bi-calendar-check text-accent me-2"></i> Schedule Service Appointment
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="modalBookingForm">
+            <div class="mb-3">
+              <label class="form-label text-white-50">Selected Automotive Service</label>
+              <input type="text" id="selectedServiceInput" class="form-control form-control-custom" readonly>
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-white-50">Your Full Name</label>
+              <input type="text" class="form-control form-control-custom" placeholder="e.g. Alex Morgan" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-white-50">Vehicle Make & Model</label>
+              <input type="text" class="form-control form-control-custom" placeholder="e.g. Porsche 911 GT3 RS" required>
+            </div>
+            <div class="row g-2 mb-3">
+              <div class="col-6">
+                <label class="form-label text-white-50">Preferred Date</label>
+                <input type="date" class="form-control form-control-custom" required>
+              </div>
+              <div class="col-6">
+                <label class="form-label text-white-50">Phone Number</label>
+                <input type="tel" class="form-control form-control-custom" placeholder="+1 555-0199" required>
+              </div>
+            </div>
+            <button type="submit" class="btn-accent w-100 mt-2">Confirm Reservation</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html" class="footer-logo mb-3 d-inline-block">
+            <i class="bi bi-speedometer2 text-accent"></i> VELOCE<span class="text-accent">MOTORS</span>
+          </a>
+          <p class="opacity-75 mb-4 max-w-350 fs-6">
+            Pioneering hypercar tuning, luxury automotive sales, and race-grade servicing. Engineered without compromise.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h5 class="fw-bold text-white mb-3 fs-6 text-uppercase tracking-wider">Company</h5>
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="about.html" class="footer-link">About Us</a>
+          <a href="services.html" class="footer-link">Services</a>
+          <a href="gallery.html" class="footer-link">Fleet Gallery</a>
+          <a href="dashboard.html" class="footer-link text-accent">Client Portal</a>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h5 class="fw-bold text-white mb-3 fs-6 text-uppercase tracking-wider">Support</h5>
+          <a href="contact.html" class="footer-link">Contact Us</a>
+          <a href="faq.html" class="footer-link">Help & FAQ</a>
+          <a href="privacy.html" class="footer-link">Privacy Policy</a>
+          <a href="login.html" class="footer-link">Account Login</a>
+          <a href="signup.html" class="footer-link">Create Account</a>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h5 class="fw-bold text-white mb-3 fs-6 text-uppercase tracking-wider">Automotive Dispatch</h5>
+          <p class="opacity-75 fs-6 mb-3">Subscribe for exclusive hypercar unveils, track day invitations, and technical guides.</p>
+          <form class="newsletter-form d-flex gap-2">
+            <input type="email" class="form-control form-control-custom" placeholder="Enter your email" required>
+            <button type="submit" class="btn-accent text-nowrap">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="pt-4 border-top border-secondary border-opacity-25 d-flex flex-column flex-md-row justify-content-between align-items-center opacity-75 fs-6">
+        <p class="mb-2 mb-md-0">&copy; 2026 VELOCE MOTORS. All rights reserved.</p>
+        <div>
+          <a href="privacy.html" class="text-white me-3 text-decoration-none">Privacy Policy</a>
+          <a href="faq.html" class="text-white text-decoration-none">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Service Modal Handler
+    document.addEventListener('DOMContentLoaded', () => {
+      const bookingModal = document.getElementById('serviceBookingModal');
+      if (bookingModal) {
+        bookingModal.addEventListener('show.bs.modal', (e) => {
+          const button = e.relatedTarget;
+          const serviceName = button.getAttribute('data-service') || 'General Service';
+          document.getElementById('selectedServiceInput').value = serviceName;
+        });
+      }
+      
+      const modalForm = document.getElementById('modalBookingForm');
+      if (modalForm) {
+        modalForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          alert('Thank you! Your service reservation request has been submitted. Our engineering advisor will call you shortly.');
+          const modalInstance = bootstrap.Modal.getInstance(bookingModal);
+          if (modalInstance) modalInstance.hide();
+          modalForm.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

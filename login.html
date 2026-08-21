@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Veloce Motors Client Portal</title>
+  <meta name="description" content="Sign in to your Veloce Motors account to access vehicle telemetry logs, track day reservations, service invoices, and dashboard analytics.">
+  <meta name="keywords" content="Veloce Login, Client Portal, Automotive Account Login">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Favicon Brand Logo -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  
+  <!-- Custom Style -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-speedometer2"></i> VELOCE<span class="text-accent">MOTORS</span>
+      </a>
+      
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2 text-white"></i>
+      </button>
+
+      <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        </ul>
+        <div class="d-flex gap-2">
+          <a href="signup.html" class="nav-auth-btn nav-signup"><i class="bi bi-person-plus"></i> Signup</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header border-bottom border-secondary">
+      <h5 class="offcanvas-title text-white" id="mobileMenuLabel">
+        <i class="bi bi-speedometer2 text-accent"></i> VELOCE MOTORS
+      </h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between">
+      <ul class="navbar-nav">
+        <li class="nav-item mb-2"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="privacy.html">Privacy Policy</a></li>
+        <li class="nav-item mb-2"><a class="nav-link text-accent" href="dashboard.html"><i class="bi bi-speedometer me-1"></i> Dashboard</a></li>
+      </ul>
+      <div class="d-grid gap-2 pt-4 border-top border-secondary">
+        <a href="signup.html" class="nav-auth-btn nav-signup text-center"><i class="bi bi-person-plus"></i> Signup</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Login Form Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="auth-card">
+        <div class="text-center mb-4">
+          <i class="bi bi-shield-lock-fill text-accent fs-1"></i>
+          <h1 class="h3 fw-bold mt-2">Welcome Back</h1>
+          <p class="opacity-75 fs-6">Access your Veloce Telemetry & Client Portal</p>
+        </div>
+
+        <!-- Social Login Icons -->
+        <div class="row g-2 mb-4">
+          <div class="col-4">
+            <a href="#" class="social-login-btn"><i class="bi bi-google text-danger"></i> Google</a>
+          </div>
+          <div class="col-4">
+            <a href="#" class="social-login-btn"><i class="bi bi-apple"></i> Apple</a>
+          </div>
+          <div class="col-4">
+            <a href="#" class="social-login-btn"><i class="bi bi-facebook text-primary"></i> Meta</a>
+          </div>
+        </div>
+
+        <div class="position-relative text-center mb-4">
+          <hr class="border-secondary opacity-25">
+          <span class="position-absolute top-50 start-50 translate-middle px-3 bg-card-custom opacity-75 fs-6">or email</span>
+        </div>
+
+        <form action="dashboard.html">
+          <div class="mb-3">
+            <label class="form-label opacity-75">Email Address</label>
+            <input type="email" class="form-control form-control-custom" placeholder="name@domain.com" required value="owner@velocemotors.com">
+          </div>
+
+          <div class="mb-3">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <label class="form-label opacity-75 mb-0">Password</label>
+              <a href="#" class="text-accent fs-6 text-decoration-none">Forgot password?</a>
+            </div>
+            <input type="password" class="form-control form-control-custom" placeholder="••••••••" required value="password123">
+          </div>
+
+          <div class="form-check mb-4">
+            <input class="form-check-input bg-primary-dark border-secondary" type="checkbox" id="rememberMe" checked>
+            <label class="form-check-input-label opacity-75 fs-6 ms-2" for="rememberMe">Remember this browser</label>
+          </div>
+
+          <button type="submit" class="btn-accent w-100 py-3 mb-3"><i class="bi bi-box-arrow-in-right me-1"></i> Sign In to Portal</button>
+
+          <p class="text-center opacity-75 fs-6 mb-0">
+            Don't have an account? <a href="signup.html" class="text-accent fw-semibold text-decoration-none">Create one</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html" class="footer-logo mb-3 d-inline-block">
+            <i class="bi bi-speedometer2 text-accent"></i> VELOCE<span class="text-accent">MOTORS</span>
+          </a>
+          <p class="opacity-75 mb-4 max-w-350 fs-6">
+            Pioneering hypercar tuning, luxury automotive sales, and race-grade servicing. Engineered without compromise.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h5 class="fw-bold text-white mb-3 fs-6 text-uppercase tracking-wider">Company</h5>
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="about.html" class="footer-link">About Us</a>
+          <a href="services.html" class="footer-link">Services</a>
+          <a href="gallery.html" class="footer-link">Fleet Gallery</a>
+          <a href="dashboard.html" class="footer-link text-accent">Client Portal</a>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h5 class="fw-bold text-white mb-3 fs-6 text-uppercase tracking-wider">Support</h5>
+          <a href="contact.html" class="footer-link">Contact Us</a>
+          <a href="faq.html" class="footer-link">Help & FAQ</a>
+          <a href="privacy.html" class="footer-link">Privacy Policy</a>
+          <a href="login.html" class="footer-link">Account Login</a>
+          <a href="signup.html" class="footer-link">Create Account</a>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h5 class="fw-bold text-white mb-3 fs-6 text-uppercase tracking-wider">Automotive Dispatch</h5>
+          <p class="opacity-75 fs-6 mb-3">Subscribe for exclusive hypercar unveils, track day invitations, and technical guides.</p>
+          <form class="newsletter-form d-flex gap-2">
+            <input type="email" class="form-control form-control-custom" placeholder="Enter your email" required>
+            <button type="submit" class="btn-accent text-nowrap">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="pt-4 border-top border-secondary border-opacity-25 d-flex flex-column flex-md-row justify-content-between align-items-center opacity-75 fs-6">
+        <p class="mb-2 mb-md-0">&copy; 2026 VELOCE MOTORS. All rights reserved.</p>
+        <div>
+          <a href="privacy.html" class="text-white me-3 text-decoration-none">Privacy Policy</a>
+          <a href="faq.html" class="text-white text-decoration-none">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

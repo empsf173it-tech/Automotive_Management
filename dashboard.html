@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Veloce Motors Telemetry & Operations</title>
+  <meta name="description" content="Veloce Motors Client & Management Dashboard. Monitor vehicle telemetry analytics, manage user accounts, review service orders, and reply to client inquiries.">
+  <meta name="keywords" content="Veloce Dashboard, Automotive Admin, Telemetry Analytics, Vehicle Orders">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Favicon Brand Logo -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  
+  <!-- Custom Style -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-primary-dark">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container-fluid px-lg-5">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-speedometer2"></i> VELOCE<span class="text-accent">MOTORS</span> <span class="badge bg-danger ms-2 fs-6">PORTAL</span>
+      </a>
+      
+      <div class="d-flex align-items-center gap-3">
+        <div class="d-none d-md-flex align-items-center gap-2 me-3">
+          <img src="assets/img/author_enzo.jpg" alt="Enzo Veloce" class="author-avatar-sm" style="width: 38px; height: 38px;">
+          <div>
+            <div class="fw-bold fs-6 lh-1">Enzo Veloce</div>
+            <small class="text-accent">Master Administrator</small>
+          </div>
+        </div>
+        <a href="index.html" class="btn btn-outline-custom btn-sm"><i class="bi bi-box-arrow-right me-1"></i> Exit Portal</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- DASHBOARD MAIN CONTAINER -->
+  <div class="container-fluid px-0">
+    <div class="row g-0">
+      
+      <!-- SIDE NAVBAR (Rule 9) -->
+      <div class="col-lg-2 dash-sidebar">
+        <div class="px-2 mb-4">
+          <small class="text-accent fw-bold text-uppercase tracking-wider">Navigation</small>
+        </div>
+        <nav class="nav flex-column">
+          <a class="dash-nav-link active" data-tab="analyticsTab">
+            <i class="bi bi-graph-up-arrow"></i> Analytics
+          </a>
+          <a class="dash-nav-link" data-tab="usersTab">
+            <i class="bi bi-people"></i> Users
+          </a>
+          <a class="dash-nav-link" data-tab="ordersTab">
+            <i class="bi bi-receipt"></i> Orders & Bookings
+          </a>
+          <a class="dash-nav-link" data-tab="messagesTab">
+            <i class="bi bi-chat-left-text"></i> Messages <span class="badge bg-danger ms-auto">3</span>
+          </a>
+        </nav>
+
+        <div class="mt-5 px-3 pt-4 border-top border-secondary border-opacity-25 text-white-50 fs-6">
+          <div class="mb-2"><i class="bi bi-shield-check text-accent me-2"></i> System Status: <span class="text-success fw-bold">ONLINE</span></div>
+          <div><i class="bi bi-cpu me-2"></i> Dyno Telemetry: <span class="text-accent">ACTIVE</span></div>
+        </div>
+      </div>
+
+      <!-- MAIN CONTENT AREA -->
+      <div class="col-lg-10 p-4 p-md-5">
+
+        <!-- ==================== TAB 1: ANALYTICS ==================== -->
+        <section id="analyticsTab" class="dash-tab-section">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+              <h1 class="h3 fw-bold mb-1">Performance Analytics</h1>
+              <p class="opacity-75 mb-0 fs-6">Real-time revenue, dyno throughput, and telemetry metrics</p>
+            </div>
+            <button class="btn-accent btn-sm"><i class="bi bi-download me-1"></i> Export Telemetry Report</button>
+          </div>
+
+          <!-- Top Stat Cards -->
+          <div class="row g-4 mb-5">
+            <div class="col-sm-6 col-xl-3">
+              <div class="dash-widget">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="text-white-50 fs-6">Monthly Revenue</span>
+                  <i class="bi bi-currency-dollar text-accent fs-4"></i>
+                </div>
+                <h2 class="fw-bold mb-1">$482,900</h2>
+                <small class="text-success"><i class="bi bi-arrow-up-short"></i> +14.2% from last month</small>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-xl-3">
+              <div class="dash-widget">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="text-white-50 fs-6">Active Service Orders</span>
+                  <i class="bi bi-tools text-accent fs-4"></i>
+                </div>
+                <h2 class="fw-bold mb-1">128</h2>
+                <small class="text-success"><i class="bi bi-arrow-up-short"></i> +8 new today</small>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-xl-3">
+              <div class="dash-widget">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="text-white-50 fs-6">ECU Tunes Executed</span>
+                  <i class="bi bi-cpu text-accent fs-4"></i>
+                </div>
+                <h2 class="fw-bold mb-1">64</h2>
+                <small class="text-accent"><i class="bi bi-check-circle"></i> 100% Dyno Passed</small>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-xl-3">
+              <div class="dash-widget">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="text-white-50 fs-6">Registered Clients</span>
+                  <i class="bi bi-person-check text-accent fs-4"></i>
+                </div>
+                <h2 class="fw-bold mb-1">1,420</h2>
+                <small class="text-success"><i class="bi bi-arrow-up-short"></i> +32 this week</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visual Bar Chart Simulation & System Logs -->
+          <div class="row g-4">
+            <div class="col-lg-8">
+              <div class="dash-widget">
+                <h3 class="h5 fw-bold mb-4">Service & Sales Revenue Breakdown (2026)</h3>
+                
+                <!-- Bar Chart Bars -->
+                <div class="d-flex align-items-end justify-content-between gap-3 pt-4 pb-2" style="height: 220px;">
+                  <div class="w-100 text-center">
+                    <div class="bg-secondary rounded-top mb-2" style="height: 60%; transition: height 1s;"></div>
+                    <small class="text-white-50">Jan</small>
+                  </div>
+                  <div class="w-100 text-center">
+                    <div class="bg-secondary rounded-top mb-2" style="height: 75%;"></div>
+                    <small class="text-white-50">Feb</small>
+                  </div>
+                  <div class="w-100 text-center">
+                    <div class="bg-secondary rounded-top mb-2" style="height: 65%;"></div>
+                    <small class="text-white-50">Mar</small>
+                  </div>
+                  <div class="w-100 text-center">
+                    <div class="bg-secondary rounded-top mb-2" style="height: 85%;"></div>
+                    <small class="text-white-50">Apr</small>
+                  </div>
+                  <div class="w-100 text-center">
+                    <div class="bg-danger rounded-top mb-2" style="height: 95%;"></div>
+                    <small class="text-accent fw-bold">May</small>
+                  </div>
+                  <div class="w-100 text-center">
+                    <div class="bg-secondary rounded-top mb-2" style="height: 80%;"></div>
+                    <small class="text-white-50">Jun</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="dash-widget">
+                <h3 class="h5 fw-bold mb-4">Dyno Telemetry Feed</h3>
+                <div class="d-flex flex-column gap-3 fs-6">
+                  <div class="border-bottom border-secondary border-opacity-25 pb-2">
+                    <div class="d-flex justify-content-between text-white fw-medium">
+                      <span>Porsche 911 GT3 RS</span>
+                      <span class="text-accent">+84 HP</span>
+                    </div>
+                    <small class="text-white-50">Stage 2 ECU Flash completed • 12 mins ago</small>
+                  </div>
+
+                  <div class="border-bottom border-secondary border-opacity-25 pb-2">
+                    <div class="d-flex justify-content-between text-white fw-medium">
+                      <span>Ferrari SF90 Stradale</span>
+                      <span class="text-success">Passed</span>
+                    </div>
+                    <small class="text-white-50">9H Ceramic Shield Cured • 1 hour ago</small>
+                  </div>
+
+                  <div class="border-bottom border-secondary border-opacity-25 pb-2">
+                    <div class="d-flex justify-content-between text-white fw-medium">
+                      <span>McLaren 720S</span>
+                      <span class="text-warning">In Dyno</span>
+                    </div>
+                    <small class="text-white-50">Boost leak test in progress • 2 hours ago</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- ==================== TAB 2: USERS ==================== -->
+        <section id="usersTab" class="dash-tab-section d-none">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+              <h1 class="h3 fw-bold mb-1">Client & User Directory</h1>
+              <p class="opacity-75 mb-0 fs-6">Manage registered supercar owners and track members</p>
+            </div>
+            <button class="btn-accent btn-sm"><i class="bi bi-person-plus me-1"></i> Add New Client</button>
+          </div>
+
+          <div class="dash-widget p-0 overflow-hidden">
+            <div class="table-responsive">
+              <table class="table table-dark table-hover mb-0 align-middle">
+                <thead class="bg-primary-custom text-uppercase fs-7 text-white-50">
+                  <tr>
+                    <th class="ps-4">Client Name</th>
+                    <th>Email</th>
+                    <th>Registered Vehicle</th>
+                    <th>Membership tier</th>
+                    <th>Status</th>
+                    <th class="pe-4 text-end">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="ps-4 fw-bold">
+                      <div class="d-flex align-items-center gap-2">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Marcus Sterling" class="author-avatar-sm" style="width: 32px; height: 32px;">
+                        Marcus Sterling
+                      </div>
+                    </td>
+                    <td>m.sterling@exotic.com</td>
+                    <td>Porsche 911 GT3 RS</td>
+                    <td><span class="badge bg-warning text-dark">VIP Track Member</span></td>
+                    <td><span class="badge bg-success">Active</span></td>
+                    <td class="pe-4 text-end">
+                      <button class="btn btn-sm btn-outline-light me-1"><i class="bi bi-eye"></i></button>
+                      <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="ps-4 fw-bold">
+                      <div class="d-flex align-items-center gap-2">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Elena Vance" class="author-avatar-sm" style="width: 32px; height: 32px;">
+                        Elena Vance
+                      </div>
+                    </td>
+                    <td>elena.vance@journal.com</td>
+                    <td>Veloce Apex GT</td>
+                    <td><span class="badge bg-info text-dark">Certified Owner</span></td>
+                    <td><span class="badge bg-success">Active</span></td>
+                    <td class="pe-4 text-end">
+                      <button class="btn btn-sm btn-outline-light me-1"><i class="bi bi-eye"></i></button>
+                      <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="ps-4 fw-bold">
+                      <div class="d-flex align-items-center gap-2">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80" alt="David Ross" class="author-avatar-sm" style="width: 32px; height: 32px;">
+                        David Ross
+                      </div>
+                    </td>
+                    <td>david.ross@motorsport.org</td>
+                    <td>Lamborghini Huracán STO</td>
+                    <td><span class="badge bg-warning text-dark">VIP Track Member</span></td>
+                    <td><span class="badge bg-success">Active</span></td>
+                    <td class="pe-4 text-end">
+                      <button class="btn btn-sm btn-outline-light me-1"><i class="bi bi-eye"></i></button>
+                      <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="ps-4 fw-bold">
+                      <div class="d-flex align-items-center gap-2">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Sebastian Vettel" class="author-avatar-sm" style="width: 32px; height: 32px;">
+                        Sebastian Vettel
+                      </div>
+                    </td>
+                    <td>s.vettel@f1.com</td>
+                    <td>Ferrari F40 / Veloce EV</td>
+                    <td><span class="badge bg-danger">Apex Legend</span></td>
+                    <td><span class="badge bg-success">Active</span></td>
+                    <td class="pe-4 text-end">
+                      <button class="btn btn-sm btn-outline-light me-1"><i class="bi bi-eye"></i></button>
+                      <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- ==================== TAB 3: ORDERS ==================== -->
+        <section id="ordersTab" class="dash-tab-section d-none">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+              <h1 class="h3 fw-bold mb-1">Service & Vehicle Orders</h1>
+              <p class="opacity-75 mb-0 fs-6">Track active workshop reservations, ECU dyno tasks, and invoice billing</p>
+            </div>
+            <button class="btn-accent btn-sm"><i class="bi bi-plus-lg me-1"></i> New Order</button>
+          </div>
+
+          <div class="dash-widget p-0 overflow-hidden">
+            <div class="table-responsive">
+              <table class="table table-dark table-hover mb-0 align-middle">
+                <thead class="bg-primary-custom text-uppercase fs-7 text-white-50">
+                  <tr>
+                    <th class="ps-4">Order ID</th>
+                    <th>Client</th>
+                    <th>Service Type</th>
+                    <th>Vehicle</th>
+                    <th>Status</th>
+                    <th>Amount</th>
+                    <th class="pe-4 text-end">Invoice</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="ps-4 fw-bold text-accent">#VEL-8921</td>
+                    <td>Marcus Sterling</td>
+                    <td>Stage 2 ECU Tuning</td>
+                    <td>Porsche 911 GT3</td>
+                    <td><span class="badge bg-success">Completed</span></td>
+                    <td class="fw-bold">$4,500</td>
+                    <td class="pe-4 text-end"><button class="btn btn-sm btn-outline-custom"><i class="bi bi-file-earmark-pdf"></i> PDF</button></td>
+                  </tr>
+
+                  <tr>
+                    <td class="ps-4 fw-bold text-accent">#VEL-8922</td>
+                    <td>Elena Vance</td>
+                    <td>9H Ceramic Coating</td>
+                    <td>Veloce Apex GT</td>
+                    <td><span class="badge bg-warning text-dark">In Progress</span></td>
+                    <td class="fw-bold">$3,800</td>
+                    <td class="pe-4 text-end"><button class="btn btn-sm btn-outline-custom"><i class="bi bi-file-earmark-pdf"></i> PDF</button></td>
+                  </tr>
+
+                  <tr>
+                    <td class="ps-4 fw-bold text-accent">#VEL-8923</td>
+                    <td>David Ross</td>
+                    <td>Track-Day Prep & Aero</td>
+                    <td>Huracán STO</td>
+                    <td><span class="badge bg-info text-dark">Scheduled</span></td>
+                    <td class="fw-bold">$2,950</td>
+                    <td class="pe-4 text-end"><button class="btn btn-sm btn-outline-custom"><i class="bi bi-file-earmark-pdf"></i> PDF</button></td>
+                  </tr>
+
+                  <tr>
+                    <td class="ps-4 fw-bold text-accent">#VEL-8924</td>
+                    <td>Claire Laurent</td>
+                    <td>Titanium Exhaust Install</td>
+                    <td>McLaren 720S</td>
+                    <td><span class="badge bg-success">Completed</span></td>
+                    <td class="fw-bold">$8,200</td>
+                    <td class="pe-4 text-end"><button class="btn btn-sm btn-outline-custom"><i class="bi bi-file-earmark-pdf"></i> PDF</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- ==================== TAB 4: MESSAGES ==================== -->
+        <section id="messagesTab" class="dash-tab-section d-none">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+              <h1 class="h3 fw-bold mb-1">Inquiries & Dispatch Messages</h1>
+              <p class="opacity-75 mb-0 fs-6">Direct communication channel with supercar clients and track drivers</p>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <!-- Message List -->
+            <div class="col-lg-5">
+              <div class="dash-widget p-3">
+                <div class="d-flex flex-column gap-2">
+                  
+                  <div class="p-3 rounded-3 bg-primary-dark border border-danger">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <h4 class="h6 fw-bold text-white mb-0">Marcus Sterling</h4>
+                      <small class="text-accent">10 mins ago</small>
+                    </div>
+                    <small class="text-white-50 d-block text-truncate">Requesting Dyno graph printout for Stage 2 tune...</small>
+                  </div>
+
+                  <div class="p-3 rounded-3 bg-primary-custom border border-secondary border-opacity-25">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <h4 class="h6 fw-bold text-white mb-0">Elena Vance</h4>
+                      <small class="text-white-50">2 hours ago</small>
+                    </div>
+                    <small class="text-white-50 d-block text-truncate">Thank you for the ceramic wrap treatment on the Apex GT!</small>
+                  </div>
+
+                  <div class="p-3 rounded-3 bg-primary-custom border border-secondary border-opacity-25">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <h4 class="h6 fw-bold text-white mb-0">Sebastian Vettel</h4>
+                      <small class="text-white-50">Yesterday</small>
+                    </div>
+                    <small class="text-white-50 d-block text-truncate">Inquiring about telemetry setup for upcoming Monza track day...</small>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Message Detail / Reply Box -->
+            <div class="col-lg-7">
+              <div class="dash-widget">
+                <div class="border-bottom border-secondary border-opacity-25 pb-3 mb-4 d-flex justify-content-between align-items-center">
+                  <div>
+                    <h3 class="h5 fw-bold mb-1">Marcus Sterling</h3>
+                    <small class="text-accent"><i class="bi bi-speedometer me-1"></i> Porsche 911 GT3 RS Owner</small>
+                  </div>
+                  <span class="badge bg-danger">Unread Inquiry</span>
+                </div>
+
+                <div class="bg-primary-dark p-3 rounded-3 mb-4 text-white-50 fs-6">
+                  "Hello Enzo, the Stage 2 ECU tune on my GT3 RS is performing phenomenally on the highway! Could your team email me the full 3D dyno torque curve telemetry report PDF for my records? Thanks!"
+                </div>
+
+                <form id="replyForm">
+                  <div class="mb-3">
+                    <label class="form-label text-white-50 fs-6">Compose Quick Reply</label>
+                    <textarea class="form-control form-control-custom" rows="4" placeholder="Type your response to Marcus..." required>Hello Marcus, absolutely! I have attached the high-resolution dyno telemetry plot and torque curves to your client portal. Best regards, Enzo.</textarea>
+                  </div>
+                  <button type="submit" class="btn-accent"><i class="bi bi-send-fill me-1"></i> Send Reply</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Reply form quick simulation
+    document.getElementById('replyForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Reply transmitted successfully to client portal!');
+    });
+  </script>
+</body>
+</html>

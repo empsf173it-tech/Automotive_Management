@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veloce Motors | Peak Automotive Engineering & Luxury Hypercars</title>
+  <meta name="description" content="Discover Veloce Motors - World-class hypercar sales, precision ECU engine tuning, ceramic coating detailing, and track preparation. Experience automotive excellence.">
+  <meta name="keywords" content="Automotive, Hypercars, Supercars, Car Servicing, Engine Tuning, Ceramic Coating, Veloce Motors">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Favicon Brand Logo -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  
+  <!-- Custom Style -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-speedometer2"></i> VELOCE<span class="text-accent">MOTORS</span>
+      </a>
+      
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2 text-white"></i>
+      </button>
+
+      <!-- Desktop Nav -->
+      <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        </ul>
+        <div class="d-flex gap-2">
+          <a href="signup.html" class="nav-auth-btn nav-signup"><i class="bi bi-person-plus"></i> Signup</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Menu (Rule 4) -->
+  <div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header border-bottom border-secondary">
+      <h5 class="offcanvas-title text-white" id="mobileMenuLabel">
+        <i class="bi bi-speedometer2 text-accent"></i> VELOCE MOTORS
+      </h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between">
+      <ul class="navbar-nav">
+        <li class="nav-item mb-2"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="privacy.html">Privacy Policy</a></li>
+        <li class="nav-item mb-2"><a class="nav-link text-accent" href="dashboard.html"><i class="bi bi-speedometer me-1"></i> Dashboard</a></li>
+      </ul>
+      <div class="d-grid gap-2 pt-4 border-top border-secondary">
+        <a href="signup.html" class="nav-auth-btn nav-signup text-center"><i class="bi bi-person-plus"></i> Signup</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 1. HERO SECTION ==================== -->
+  <section class="hero-section-bg" style="background-image: url('assets/img/hero_car.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content-relative">
+      <div class="max-w-800 mx-auto text-center">
+        <div class="hero-badge mx-auto">
+          <i class="bi bi-lightning-charge-fill"></i> NEXT-GEN AUTOMOTIVE EXCELLENCE
+        </div>
+        <h1 class="hero-title text-center">
+          Unleash Peak <span class="text-gradient">Performance & Engineering</span>
+        </h1>
+        <p class="lead text-light mb-4 opacity-85 text-center max-w-700 mx-auto">
+          At Veloce Motors, we fuse precision aerodynamics, bespoke engine recalibration, and ultra-luxury hypercar craftsmanship for unmatched driving perfection.
+        </p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="services.html" class="btn-accent"><i class="bi bi-tools"></i> Explore Services</a>
+          <a href="gallery.html" class="btn-outline-custom"><i class="bi bi-grid-3x3-gap"></i> View Fleet Gallery</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 2. STATS SECTION ==================== -->
+  <section class="py-5 bg-primary-custom border-top border-bottom border-secondary border-opacity-10">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <div class="stat-box">
+            <div class="stat-number" data-target="15000" data-suffix="+">0</div>
+            <div class="text-white opacity-75 fw-medium">Hypercars Serviced</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-box">
+            <div class="stat-number" data-target="99" data-suffix="%">0</div>
+            <div class="text-white opacity-75 fw-medium">Client Satisfaction</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-box">
+            <div class="stat-number" data-target="45" data-suffix="+">0</div>
+            <div class="text-white opacity-75 fw-medium">Global Service Hubs</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-box">
+            <div class="stat-number" data-target="24" data-suffix="/7">0</div>
+            <div class="text-white opacity-75 fw-medium">Trackside Support</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3. WHY CHOOSE US SECTION ==================== -->
+  <section class="py-6 py-lg-7">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <span class="text-accent fw-bold text-uppercase tracking-wider">The Veloce Advantage</span>
+        <h2 class="display-6 fw-bold mt-2">Engineered For Perfection</h2>
+        <p class="text-secondary opacity-75">Designed to meet the uncompromising standards of supercar enthusiasts and professional drivers worldwide.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="custom-card">
+            <div class="card-icon-box">
+              <i class="bi bi-cpu"></i>
+            </div>
+            <h4 class="h5 fw-bold mb-3">Custom ECU Calibration</h4>
+            <p class="opacity-75 mb-0">Dyno-proven remapping that optimizes torque delivery, throttle reaction, and peak horsepower cleanly.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="custom-card">
+            <div class="card-icon-box">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <h4 class="h5 fw-bold mb-3">OEM Certified Technicians</h4>
+            <p class="opacity-75 mb-0">Master engineers certified directly by top luxury European & American performance manufacturers.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="custom-card">
+            <div class="card-icon-box">
+              <i class="bi bi-magic"></i>
+            </div>
+            <h4 class="h5 fw-bold mb-3">Nanotech Ceramic Wrap</h4>
+            <p class="opacity-75 mb-0">State-of-the-art 9H hydrophobic ceramic protection shielding your vehicle from environmental degradation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. FEATURED FLEET SHOWCASE ==================== -->
+  <section class="py-6 bg-primary-custom border-top border-secondary border-opacity-10">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5">
+        <div>
+          <span class="text-accent fw-bold text-uppercase tracking-wider">Featured Supercars</span>
+          <h2 class="display-6 fw-bold mt-2">Apex Engineering Showcase</h2>
+        </div>
+        <a href="gallery.html" class="btn-outline-custom mt-3 mt-md-0">View All Vehicles <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-0">
+            <img src="assets/img/car_hyper_blue_1787223738241.jpg" alt="Veloce Apex GT" class="w-100 object-fit-cover" style="height: 240px;">
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-danger text-white">V12 Twin-Turbo</span>
+                <span class="text-accent fw-bold fs-5">780 HP</span>
+              </div>
+              <h3 class="h5 fw-bold">Veloce Apex GT Hypercar</h3>
+              <p class="opacity-75 fs-6 mb-3">Carbon-fiber monocoque structure engineered for track dominance and street comfort.</p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top border-secondary border-opacity-25">
+                <span class="text-white opacity-75 fs-6"><i class="bi bi-speedometer me-1"></i> 0-100: 2.7s</span>
+                <a href="contact.html" class="text-accent fw-semibold text-decoration-none">Inquire <i class="bi bi-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-0">
+            <img src="assets/img/car_hyper_silver_1787223762430.jpg" alt="Dyno Tuned GT3" class="w-100 object-fit-cover" style="height: 240px;">
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-danger text-white">Stage 3 ECU</span>
+                <span class="text-accent fw-bold fs-5">650 HP</span>
+              </div>
+              <h3 class="h5 fw-bold">Veloce GT3 Track Edition</h3>
+              <p class="opacity-75 fs-6 mb-3">Adjustable rear wing telemetry system with titanium sport exhaust calibration.</p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top border-secondary border-opacity-25">
+                <span class="text-white opacity-75 fs-6"><i class="bi bi-speedometer me-1"></i> Top: 340 km/h</span>
+                <a href="contact.html" class="text-accent fw-semibold text-decoration-none">Inquire <i class="bi bi-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="custom-card p-0">
+            <img src="assets/img/service_ev_battery_1787223641131.jpg" alt="Aero Carbon Roadster" class="w-100 object-fit-cover" style="height: 240px;">
+            <div class="p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-danger text-white">Electric Hybrid</span>
+                <span class="text-accent fw-bold fs-5">900 HP</span>
+              </div>
+              <h3 class="h5 fw-bold">Veloce EV Roadster</h3>
+              <p class="opacity-75 fs-6 mb-3">Instant torque vectoring propulsion coupled with ultra-light carbon ceramic brakes.</p>
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top border-secondary border-opacity-25">
+                <span class="text-white opacity-75 fs-6"><i class="bi bi-lightning-charge me-1"></i> Range: 550 km</span>
+                <a href="contact.html" class="text-accent fw-semibold text-decoration-none">Inquire <i class="bi bi-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5. SERVICES OVERVIEW ==================== -->
+  <section class="py-6">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6">
+          <img src="assets/img/service_tuning_1787212526259.jpg" alt="Engine Diagnostic" class="img-fluid rounded-4 shadow-lg border border-secondary border-opacity-25">
+        </div>
+        <div class="col-lg-6">
+          <span class="text-accent fw-bold text-uppercase tracking-wider">Master Care</span>
+          <h2 class="display-6 fw-bold mt-2 mb-4">Comprehensive Automotive Service & Calibration</h2>
+          <p class="opacity-75 mb-4">We offer end-to-end mechanical, electrical, and cosmetic solutions designed specifically for high-end luxury, exotic, and race-spec automobiles.</p>
+          
+          <div class="d-flex flex-column gap-3 mb-4">
+            <div class="d-flex gap-3 align-items-start">
+              <i class="bi bi-check-circle-fill text-accent fs-4"></i>
+              <div>
+                <h4 class="h6 fw-bold mb-1">State-of-the-Art Dyno Testing</h4>
+                <p class="opacity-75 mb-0 fs-6">Precision power measurements under real-world load conditions.</p>
+              </div>
+            </div>
+            <div class="d-flex gap-3 align-items-start">
+              <i class="bi bi-check-circle-fill text-accent fs-4"></i>
+              <div>
+                <h4 class="h6 fw-bold mb-1">Paint Protection Film & Detailing</h4>
+                <p class="opacity-75 mb-0 fs-6">Self-healing clear wraps ensuring pristine paint preservation.</p>
+              </div>
+            </div>
+            <div class="d-flex gap-3 align-items-start">
+              <i class="bi bi-check-circle-fill text-accent fs-4"></i>
+              <div>
+                <h4 class="h6 fw-bold mb-1">Bespoke Interior Craftsmanship</h4>
+                <p class="opacity-75 mb-0 fs-6">Custom Alcantara, Nappa leather, and real carbon fiber accents.</p>
+              </div>
+            </div>
+          </div>
+          <a href="services.html" class="btn-accent"><i class="bi bi-arrow-right-circle"></i> View All 8+ Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 6. TESTIMONIALS SECTION ==================== -->
+  <section class="py-6 my-5 bg-primary-custom border-top border-bottom border-secondary border-opacity-10">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <span class="text-accent fw-bold text-uppercase tracking-wider">Client Feedback</span>
+        <h2 class="display-6 fw-bold mt-2">Trusted By Visionaries</h2>
+      </div>
+
+      <div class="row g-4 mb-3">
+        <div class="col-md-4">
+          <div class="custom-card">
+            <div class="text-warning mb-3">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="fst-italic opacity-75 mb-4">"Veloce Motors transformed my track day experience. The Stage 2 ECU tune and brake calibration added 80 HP while giving me incredible confidence into every corner."</p>
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Marcus Sterling" class="author-avatar-sm">
+              <div>
+                <h4 class="h6 fw-bold mb-0">Marcus Sterling</h4>
+                <small class="text-accent">GT3 Driver & Collector</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="custom-card">
+            <div class="text-warning mb-3">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="fst-italic opacity-75 mb-4">"The ceramic coating finish on my exotic supercar looks glossier than the day it left the showroom. Incredible white-glove customer service throughout."</p>
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Elena Vance" class="author-avatar-sm">
+              <div>
+                <h4 class="h6 fw-bold mb-0">Elena Vance</h4>
+                <small class="text-accent">Automotive Journalist</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="custom-card">
+            <div class="text-warning mb-3">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="fst-italic opacity-75 mb-4">"Their 24/7 roadside assist and telemetry diagnostics saved our rally event. The team is hyper-knowledgeable and completely transparent."</p>
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80" alt="David Ross" class="author-avatar-sm">
+              <div>
+                <h4 class="h6 fw-bold mb-0">David Ross</h4>
+                <small class="text-accent">Supercar Owner</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 7. BOOK SERVICE CTA BANNER ==================== -->
+  <section class="py-5 my-5">
+    <div class="container">
+      <div class="custom-card p-5 text-center text-md-start d-md-flex align-items-center justify-content-between bg-primary-custom" style="background: linear-gradient(135deg, var(--primary-card) 0%, rgba(230,57,70,0.15) 100%);">
+        <div class="mb-4 mb-md-0">
+          <h2 class="fw-bold mb-2">Ready to Elevate Your Automotive Performance?</h2>
+          <p class="opacity-75 mb-0">Book a personalized consultation or service appointment with our certified engineers today.</p>
+        </div>
+        <div class="d-flex gap-3 justify-content-center">
+          <a href="contact.html" class="btn-accent text-nowrap"><i class="bi bi-calendar-check"></i> Book Service</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER (Rule 5) ==================== -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <!-- Col 1: Brand & Socials -->
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html" class="footer-logo mb-3 d-inline-block">
+            <i class="bi bi-speedometer2 text-accent"></i> VELOCE<span class="text-accent">MOTORS</span>
+          </a>
+          <p class="opacity-75 mb-4 max-w-350 fs-6">
+            Pioneering hypercar tuning, luxury automotive sales, and race-grade servicing. Engineered without compromise.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Company Links -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="fw-bold text-white mb-3 fs-6 text-uppercase tracking-wider">Company</h5>
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="about.html" class="footer-link">About Us</a>
+          <a href="services.html" class="footer-link">Services</a>
+          <a href="gallery.html" class="footer-link">Fleet Gallery</a>
+          <a href="dashboard.html" class="footer-link text-accent">Client Portal</a>
+        </div>
+
+        <!-- Col 3: Support Links -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="fw-bold text-white mb-3 fs-6 text-uppercase tracking-wider">Support</h5>
+          <a href="contact.html" class="footer-link">Contact Us</a>
+          <a href="faq.html" class="footer-link">Help & FAQ</a>
+          <a href="privacy.html" class="footer-link">Privacy Policy</a>
+          <a href="login.html" class="footer-link">Account Login</a>
+          <a href="signup.html" class="footer-link">Create Account</a>
+        </div>
+
+        <!-- Col 4: Newsletter Form -->
+        <div class="col-lg-4 col-md-6">
+          <h5 class="fw-bold text-white mb-3 fs-6 text-uppercase tracking-wider">Automotive Dispatch</h5>
+          <p class="opacity-75 fs-6 mb-3">Subscribe for exclusive hypercar unveils, track day invitations, and technical guides.</p>
+          <form class="newsletter-form d-flex gap-2">
+            <input type="email" class="form-control form-control-custom" placeholder="Enter your email" required>
+            <button type="submit" class="btn-accent text-nowrap">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="pt-4 border-top border-secondary border-opacity-25 d-flex flex-column flex-md-row justify-content-between align-items-center opacity-75 fs-6">
+        <p class="mb-2 mb-md-0">&copy; 2026 VELOCE MOTORS. All rights reserved.</p>
+        <div>
+          <a href="privacy.html" class="text-white me-3 text-decoration-none">Privacy Policy</a>
+          <a href="faq.html" class="text-white text-decoration-none">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button (Rule 5) -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

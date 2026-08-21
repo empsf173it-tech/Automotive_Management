@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automotive Gallery | Veloce Motors - Fleet & Tuning Portfolio</title>
+  <meta name="description" content="View Veloce Motors' portfolio of custom hypercars, ECU dyno builds, ceramic wraps, and track day race prepped exotics. Filter by category.">
+  <meta name="keywords" content="Automotive Gallery, Hypercar Portfolio, Car Tuning Photos, Detailing Showcase">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Favicon Brand Logo -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  
+  <!-- Custom Style -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-speedometer2"></i> VELOCE<span class="text-accent">MOTORS</span>
+      </a>
+      
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2 text-white"></i>
+      </button>
+
+      <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        </ul>
+        <div class="d-flex gap-2">
+          <a href="signup.html" class="nav-auth-btn nav-signup"><i class="bi bi-person-plus"></i> Signup</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header border-bottom border-secondary">
+      <h5 class="offcanvas-title text-white" id="mobileMenuLabel">
+        <i class="bi bi-speedometer2 text-accent"></i> VELOCE MOTORS
+      </h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between">
+      <ul class="navbar-nav">
+        <li class="nav-item mb-2"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item mb-2"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="privacy.html">Privacy Policy</a></li>
+        <li class="nav-item mb-2"><a class="nav-link text-accent" href="dashboard.html"><i class="bi bi-speedometer me-1"></i> Dashboard</a></li>
+      </ul>
+      <div class="d-grid gap-2 pt-4 border-top border-secondary">
+        <a href="signup.html" class="nav-auth-btn nav-signup text-center"><i class="bi bi-person-plus"></i> Signup</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <section class="page-hero-bg" style="background-image: url('assets/img/hero_car.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content-relative text-center">
+      <span class="text-accent fw-bold text-uppercase tracking-wider">Visual Excellence</span>
+      <h1 class="display-5 fw-bold mt-2 text-center">Automotive Showcase</h1>
+      <p class="opacity-85 lead max-w-700 mx-auto text-center">Explore our portfolio of custom builds, dyno tunes, paint protection wraps, and track icons.</p>
+    </div>
+  </section>
+
+  <!-- Filter & Gallery Grid -->
+  <section class="py-6">
+    <div class="container">
+      
+      <!-- Category Filter Tabs -->
+      <div class="d-flex flex-wrap justify-content-center mb-5">
+        <button class="filter-btn active" data-filter="all">All Vehicles</button>
+        <button class="filter-btn" data-filter="hypercars">Hypercars</button>
+        <button class="filter-btn" data-filter="tuning">Dyno & Tuning</button>
+        <button class="filter-btn" data-filter="detailing">Detailing & PPF</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="row g-4" id="galleryGrid">
+
+        <!-- Item 1 -->
+        <div class="col-md-6 col-lg-4 gallery-col" data-category="hypercars">
+          <div class="gallery-item">
+            <img src="assets/img/car_hyper_blue_1787223738241.jpg" alt="Veloce Apex GT">
+            <div class="gallery-overlay">
+              <span class="badge bg-danger mb-2 align-self-start">Hypercars</span>
+              <h3 class="h5 fw-bold mb-1">Veloce Apex GT Hypercar</h3>
+              <p class="opacity-75 fs-6 mb-2">V12 Twin-Turbo Twin-Clutch Beast</p>
+              <button class="btn btn-sm btn-outline-light align-self-start view-img-btn" data-src="assets/img/car_hyper_blue_1787223738241.jpg" data-title="Veloce Apex GT Hypercar"><i class="bi bi-zoom-in me-1"></i> Expand View</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="col-md-6 col-lg-4 gallery-col" data-category="tuning">
+          <div class="gallery-item">
+            <img src="assets/img/service_tuning_1787212526259.jpg" alt="Dyno Calibration">
+            <div class="gallery-overlay">
+              <span class="badge bg-danger mb-2 align-self-start">Dyno & Tuning</span>
+              <h3 class="h5 fw-bold mb-1">Stage 3 ECU Calibration</h3>
+              <p class="opacity-75 fs-6 mb-2">Dual ECU Telemetry Diagnostic</p>
+              <button class="btn btn-sm btn-outline-light align-self-start view-img-btn" data-src="assets/img/service_tuning_1787212526259.jpg" data-title="Stage 3 ECU Calibration"><i class="bi bi-zoom-in me-1"></i> Expand View</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="col-md-6 col-lg-4 gallery-col" data-category="detailing">
+          <div class="gallery-item">
+            <img src="assets/img/service_detailing_1787212550257.jpg" alt="Ceramic Wrap">
+            <div class="gallery-overlay">
+              <span class="badge bg-danger mb-2 align-self-start">Detailing & PPF</span>
+              <h3 class="h5 fw-bold mb-1">9H Ceramic Shield Wrap</h3>
+              <p class="opacity-75 fs-6 mb-2">Gloss Black Hydrophobic Application</p>
+              <button class="btn btn-sm btn-outline-light align-self-start view-img-btn" data-src="assets/img/service_detailing_1787212550257.jpg" data-title="9H Ceramic Shield Wrap"><i class="bi bi-zoom-in me-1"></i> Expand View</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="col-md-6 col-lg-4 gallery-col" data-category="hypercars">
+          <div class="gallery-item">
+            <img src="assets/img/car_hyper_silver_1787223762430.jpg" alt="Track GT3">
+            <div class="gallery-overlay">
+              <span class="badge bg-danger mb-2 align-self-start">Hypercars</span>
+              <h3 class="h5 fw-bold mb-1">GT3 RS Track Edition</h3>
+              <p class="opacity-75 fs-6 mb-2">Titanium Exhaust & Aero Wing</p>
+              <button class="btn btn-sm btn-outline-light align-self-start view-img-btn" data-src="assets/img/car_hyper_silver_1787223762430.jpg" data-title="GT3 RS Track Edition"><i class="bi bi-zoom-in me-1"></i> Expand View</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="col-md-6 col-lg-4 gallery-col" data-category="tuning">
+          <div class="gallery-item">
+            <img src="assets/img/service_gearbox_1787223690537.jpg" alt="Custom Engine Rebuild">
+            <div class="gallery-overlay">
+              <span class="badge bg-danger mb-2 align-self-start">Dyno & Tuning</span>
+              <h3 class="h5 fw-bold mb-1">V8 Twin-Turbo Overhaul</h3>
+              <p class="opacity-75 fs-6 mb-2">Forged Pistons & Billet Turbos</p>
+              <button class="btn btn-sm btn-outline-light align-self-start view-img-btn" data-src="assets/img/service_gearbox_1787223690537.jpg" data-title="V8 Twin-Turbo Overhaul"><i class="bi bi-zoom-in me-1"></i> Expand View</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="col-md-6 col-lg-4 gallery-col" data-category="detailing">
+          <div class="gallery-item">
+            <img src="assets/img/service_interior_1787223664203.jpg" alt="Matte PPF Wrap">
+            <div class="gallery-overlay">
+              <span class="badge bg-danger mb-2 align-self-start">Detailing & PPF</span>
+              <h3 class="h5 fw-bold mb-1">Matte Stealth PPF Wrap</h3>
+              <p class="opacity-75 fs-6 mb-2">Self-Healing Paint Protection</p>
+              <button class="btn btn-sm btn-outline-light align-self-start view-img-btn" data-src="assets/img/service_interior_1787223664203.jpg" data-title="Matte Stealth PPF Wrap"><i class="bi bi-zoom-in me-1"></i> Expand View</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="col-md-6 col-lg-4 gallery-col" data-category="hypercars">
+          <div class="gallery-item">
+            <img src="assets/img/service_brakes_1787223593839.jpg" alt="Carbon Ceramic Rotors">
+            <div class="gallery-overlay">
+              <span class="badge bg-danger mb-2 align-self-start">Hypercars</span>
+              <h3 class="h5 fw-bold mb-1">Brembo Carbon Rotor System</h3>
+              <p class="opacity-75 fs-6 mb-2">Monobloc Caliper Assembly</p>
+              <button class="btn btn-sm btn-outline-light align-self-start view-img-btn" data-src="assets/img/service_brakes_1787223593839.jpg" data-title="Brembo Carbon Rotor System"><i class="bi bi-zoom-in me-1"></i> Expand View</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="col-md-6 col-lg-4 gallery-col" data-category="tuning">
+          <div class="gallery-item">
+            <img src="assets/img/service_exhaust_1787223614503.jpg" alt="Valved Exhaust Setup">
+            <div class="gallery-overlay">
+              <span class="badge bg-danger mb-2 align-self-start">Dyno & Tuning</span>
+              <h3 class="h5 fw-bold mb-1">Inconel Valved Exhaust</h3>
+              <p class="opacity-75 fs-6 mb-2">Wireless Acoustic Valve Calibration</p>
+              <button class="btn btn-sm btn-outline-light align-self-start view-img-btn" data-src="assets/img/service_exhaust_1787223614503.jpg" data-title="Inconel Valved Exhaust"><i class="bi bi-zoom-in me-1"></i> Expand View</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 9 -->
+        <div class="col-md-6 col-lg-4 gallery-col" data-category="detailing">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=800&q=80" alt="Aero Roadster Detail">
+            <div class="gallery-overlay">
+              <span class="badge bg-danger mb-2 align-self-start">Detailing & PPF</span>
+              <h3 class="h5 fw-bold mb-1">Aero Carbon Roadster Detail</h3>
+              <p class="opacity-75 fs-6 mb-2">Full Exterior Nanotech Paint Polish</p>
+              <button class="btn btn-sm btn-outline-light align-self-start view-img-btn" data-src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=800&q=80" data-title="Aero Carbon Roadster Detail"><i class="bi bi-zoom-in me-1"></i> Expand View</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 10 -->
+        <div class="col-md-6 col-lg-4 gallery-col" data-category="hypercars">
+          <div class="gallery-item">
+            <img src="assets/img/service_ev_battery_1787223641131.jpg" alt="EV Hypercar Chassis">
+            <div class="gallery-overlay">
+              <span class="badge bg-danger mb-2 align-self-start">Hypercars</span>
+              <h3 class="h5 fw-bold mb-1">800V EV Hypercar Chassis</h3>
+              <p class="opacity-75 fs-6 mb-2">High Voltage Battery Powertrain</p>
+              <button class="btn btn-sm btn-outline-light align-self-start view-img-btn" data-src="assets/img/service_ev_battery_1787223641131.jpg" data-title="800V EV Hypercar Chassis"><i class="bi bi-zoom-in me-1"></i> Expand View</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 11 -->
+        <div class="col-md-6 col-lg-4 gallery-col" data-category="tuning">
+          <div class="gallery-item">
+            <img src="assets/img/service_track_prep_1787223714273.jpg" alt="Pit Lane Telemetry">
+            <div class="gallery-overlay">
+              <span class="badge bg-danger mb-2 align-self-start">Dyno & Tuning</span>
+              <h3 class="h5 fw-bold mb-1">Pit Lane Telemetry Station</h3>
+              <p class="opacity-75 fs-6 mb-2">Real-Time Track Camber & Tire Setup</p>
+              <button class="btn btn-sm btn-outline-light align-self-start view-img-btn" data-src="assets/img/service_track_prep_1787223714273.jpg" data-title="Pit Lane Telemetry Station"><i class="bi bi-zoom-in me-1"></i> Expand View</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 12 -->
+        <div class="col-md-6 col-lg-4 gallery-col" data-category="detailing">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80" alt="Hydrophobic Gloss Finish">
+            <div class="gallery-overlay">
+              <span class="badge bg-danger mb-2 align-self-start">Detailing & PPF</span>
+              <h3 class="h5 fw-bold mb-1">Hydrophobic Gloss Finish</h3>
+              <p class="opacity-75 fs-6 mb-2">Water-Beading Ceramic Coating</p>
+              <button class="btn btn-sm btn-outline-light align-self-start view-img-btn" data-src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80" data-title="Hydrophobic Gloss Finish"><i class="bi bi-zoom-in me-1"></i> Expand View</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-primary-dark text-white border border-secondary border-opacity-25">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold" id="lightboxTitle">Automotive View</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center p-4">
+          <img id="lightboxImg" src="" alt="Gallery Image" class="img-fluid rounded-3 border border-secondary border-opacity-25 mb-2">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html" class="footer-logo mb-3 d-inline-block">
+            <i class="bi bi-speedometer2 text-accent"></i> VELOCE<span class="text-accent">MOTORS</span>
+          </a>
+          <p class="opacity-75 mb-4 max-w-350 fs-6">
+            Pioneering hypercar tuning, luxury automotive sales, and race-grade servicing. Engineered without compromise.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h5 class="fw-bold text-white mb-3 fs-6 text-uppercase tracking-wider">Company</h5>
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="about.html" class="footer-link">About Us</a>
+          <a href="services.html" class="footer-link">Services</a>
+          <a href="gallery.html" class="footer-link">Fleet Gallery</a>
+          <a href="dashboard.html" class="footer-link text-accent">Client Portal</a>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h5 class="fw-bold text-white mb-3 fs-6 text-uppercase tracking-wider">Support</h5>
+          <a href="contact.html" class="footer-link">Contact Us</a>
+          <a href="faq.html" class="footer-link">Help & FAQ</a>
+          <a href="privacy.html" class="footer-link">Privacy Policy</a>
+          <a href="login.html" class="footer-link">Account Login</a>
+          <a href="signup.html" class="footer-link">Create Account</a>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h5 class="fw-bold text-white mb-3 fs-6 text-uppercase tracking-wider">Automotive Dispatch</h5>
+          <p class="opacity-75 fs-6 mb-3">Subscribe for exclusive hypercar unveils, track day invitations, and technical guides.</p>
+          <form class="newsletter-form d-flex gap-2">
+            <input type="email" class="form-control form-control-custom" placeholder="Enter your email" required>
+            <button type="submit" class="btn-accent text-nowrap">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="pt-4 border-top border-secondary border-opacity-25 d-flex flex-column flex-md-row justify-content-between align-items-center opacity-75 fs-6">
+        <p class="mb-2 mb-md-0">&copy; 2026 VELOCE MOTORS. All rights reserved.</p>
+        <div>
+          <a href="privacy.html" class="text-white me-3 text-decoration-none">Privacy Policy</a>
+          <a href="faq.html" class="text-white text-decoration-none">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Lightbox modal handler
+    document.addEventListener('DOMContentLoaded', () => {
+      const viewBtns = document.querySelectorAll('.view-img-btn');
+      const lightboxModal = new bootstrap.Modal(document.getElementById('lightboxModal'));
+      const lightboxImg = document.getElementById('lightboxImg');
+      const lightboxTitle = document.getElementById('lightboxTitle');
+
+      viewBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          lightboxImg.src = btn.getAttribute('data-src');
+          lightboxTitle.textContent = btn.getAttribute('data-title');
+          lightboxModal.show();
+        });
+      });
+    });
+  </script>
+</body>
+</html>
